@@ -1,4 +1,4 @@
-export default interface IProvider {
+export default interface INotificationProvider {
   config(params: any): void;
 
   publish(message: any): void;
