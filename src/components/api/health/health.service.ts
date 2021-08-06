@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { PublisherService } from 'src/components/notification/publisher/publisher.service';
+import { PublisherService } from 'src/components/message/publisher/publisher.service';
 
 @Injectable()
 export class HealthService {

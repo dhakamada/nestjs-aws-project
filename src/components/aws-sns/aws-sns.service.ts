@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import INotificationProvider from '../notification/publisher/interfaces/notification-provider.interface';
+import IMessageProvider from '../message/publisher/interfaces/notification-provider.interface';
 import * as AWS from 'aws-sdk';
 import { ConfigService } from '@nestjs/config';
 
@@ -8,7 +8,7 @@ type AwsConfig = {
 };
 
 @Injectable()
-export class AwsSnsService implements INotificationProvider {
+export class AwsSnsService implements IMessageProvider {
   private readonly snsEndpoint: string;
   private readonly region: string;
   private topicArn: string;
