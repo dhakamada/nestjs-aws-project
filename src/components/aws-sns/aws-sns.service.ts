@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import IMessageProvider from '../message/publisher/interfaces/notification-provider.interface';
+import IMessageProvider from '../message/publisher/interfaces/message-provider.interface';
 import * as AWS from 'aws-sdk';
 import { ConfigService } from '@nestjs/config';
 
@@ -20,7 +20,6 @@ export class AwsSnsService implements IMessageProvider {
 
   config(params: AwsConfig): void {
     this.topicArn = params.topicArn;
-    AWS.config.update({ region: this.region });
   }
 
   async publish(message: any): Promise<void> {
