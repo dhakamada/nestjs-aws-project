@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { PublisherModule } from './components/publisher/publisher.module';
+import { PublisherModule } from './components/messager/publisher/publisher.module';
 import { HealthModule } from './components/api/health/health.module';
 import { AwsSnsModule } from './components/aws-sns/aws-sns.module';
 import { ConfigModule } from '@nestjs/config';

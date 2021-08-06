@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import IProvider from '../publisher/interfaces/provider.interface';
+import IProvider from '../messager/publisher/interfaces/provider.interface';
 import * as AWS from 'aws-sdk';
 import { ConfigService } from '@nestjs/config';
 
@@ -22,6 +22,7 @@ export class AwsSnsService implements IProvider {
     this.topicArn = params.topicArn;
     AWS.config.update({ region: this.region });
   }
+
   async publish(message: any): Promise<void> {
     try {
       const publishParams = {

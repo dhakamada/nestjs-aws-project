@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { AwsSnsService } from '../aws-sns/aws-sns.service';
+import { AwsSnsService } from '../../aws-sns/aws-sns.service';
 
 @Injectable()
 export class PublisherService {
