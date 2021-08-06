@@ -28,4 +28,4 @@ $ yarn
 $ yarn start:dev
 ```
 
-If you open http://localhost:3000/health, it's going to send a random message to topic configured.
+If you open http://localhost:3000/health, it's going to send a random message to configured topic.
